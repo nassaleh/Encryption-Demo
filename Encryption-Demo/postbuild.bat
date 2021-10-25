@@ -22,7 +22,7 @@ set TargetName=%4
 echo ProjectDir: %5
 set ProjectDir=%5
 
-dotnet publish -r linux-arm -o %ProjectDir%/bin/linux-arm/publish
+@REM dotnet publish -r linux-arm -o %ProjectDir%/bin/linux-arm/publish
 
 @REM Kill any process that are running
 C:\Windows\Sysnative\bash.exe -c "ssh 'debian@192.168.1.111' -f 'pkill %TargetName%'"
